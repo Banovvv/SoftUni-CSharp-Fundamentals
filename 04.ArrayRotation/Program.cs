@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace _04.ArrayRotation
 {
@@ -6,25 +7,25 @@ namespace _04.ArrayRotation
     {
         static void Main()
         {
-            var inputArray = Console.ReadLine();
+            string[] inputArray = Console.ReadLine().Split().ToArray();
             var rotations = int.Parse(Console.ReadLine());
-            string[] array = inputArray.Split(' ');
-            string temp = string.Empty;
 
-            // TODO: Complete this one
             for (int i = 1; i <= rotations; i++)
             {
-                temp = array[array.Length - i];
-                array[array.Length - i] = array[0];
-                array[0] = temp;
+                string firstElement = inputArray[0];
+
+                for (int j = 1; j < inputArray.Length; j++)
+                {
+                    string currentElement = inputArray[j];
+                    inputArray[j - 1] = currentElement;
+                }
+                inputArray[inputArray.Length - 1] = firstElement;
             }
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < inputArray.Length; i++)
             {
-                Console.Write($"{array[i]} ");
+                Console.Write($"{inputArray[i]} ");
             }
-
-            Console.ReadLine();
         }
     }
 }
