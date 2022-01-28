@@ -15,15 +15,15 @@ namespace _01.SmallestOfThreeNumbers
 
         static void SmallestInteger(int one, int two, int three)
         {
-            if (one < two && one < three)
+            if (one <= two && one <= three)
             {
                 Console.WriteLine(one);
             }
-            else if (two < one && two < three)
+            else if (two <= one && two <= three)
             {
                 Console.WriteLine(two);
             }
-            else if (three < one && three < two)
+            else if (three <= one && three <= two)
             {
                 Console.WriteLine(three);
             }
