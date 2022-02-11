@@ -6,7 +6,7 @@ namespace _06.CardsGame
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<int> playerOne = Console.ReadLine().Split().Select(int.Parse).ToList();
             List<int> playerTwo = Console.ReadLine().Split().Select(int.Parse).ToList();
