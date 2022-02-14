@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{530862E5-D2EF-4617-ADCB-764CE09990D9}</ProjectGuid>
+    <ProjectGuid>{F95B565C-9D1B-4AD8-855E-A2C50B67CA69}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02.ArrayModifier</RootNamespace>
-    <AssemblyName>02.ArrayModifier</AssemblyName>
+    <RootNamespace>_03.MovingTarget</RootNamespace>
+    <AssemblyName>03.MovingTarget</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

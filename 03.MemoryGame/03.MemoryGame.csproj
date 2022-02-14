@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{530862E5-D2EF-4617-ADCB-764CE09990D9}</ProjectGuid>
+    <ProjectGuid>{CE642A13-3575-4788-B915-608DCA03A258}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02.ArrayModifier</RootNamespace>
-    <AssemblyName>02.ArrayModifier</AssemblyName>
+    <RootNamespace>_03.MemoryGame</RootNamespace>
+    <AssemblyName>03.MemoryGame</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

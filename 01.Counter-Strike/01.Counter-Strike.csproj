@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{530862E5-D2EF-4617-ADCB-764CE09990D9}</ProjectGuid>
+    <ProjectGuid>{EC9B2528-8C8A-4FE3-A68A-43414570B63C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02.ArrayModifier</RootNamespace>
-    <AssemblyName>02.ArrayModifier</AssemblyName>
+    <RootNamespace>_01.Counter_Strike</RootNamespace>
+    <AssemblyName>01.Counter-Strike</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
