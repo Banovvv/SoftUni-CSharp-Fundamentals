@@ -10,42 +10,35 @@ namespace _06.CardsGame
         {
             List<int> playerOne = Console.ReadLine().Split().Select(int.Parse).ToList();
             List<int> playerTwo = Console.ReadLine().Split().Select(int.Parse).ToList();
-            
-            for (int i = 0; i < playerOne.Count; i++)
+
+            while (true)
             {
-                if(playerOne.Count == 0 || playerTwo.Count == 0)
+                if (playerOne[0] > playerTwo[0])
                 {
+                    playerOne.Add(playerOne[0]);
+                    playerOne.Add(playerTwo[0]);
+                }
+                else if (playerOne[0] < playerTwo[0])
+                {
+                    playerTwo.Add(playerTwo[0]);
+                    playerTwo.Add(playerOne[0]);
+                }
+
+                playerOne.Remove(playerOne[0]);
+                playerTwo.Remove(playerTwo[0]);
+
+                if (playerOne.Count == 0)
+                {
+                    int sum = playerTwo.Sum();
+                    Console.WriteLine($"Second player wins! Sum: {sum}");
                     break;
                 }
-
-                if(playerOne[i] == playerTwo[i])
+                else if (playerTwo.Count == 0)
                 {
-                    playerOne.RemoveAt(i);
-                    playerTwo.RemoveAt(i);
+                    int sum = playerOne.Sum();
+                    Console.WriteLine($"First player wins! Sum: {sum}");
+                    break;
                 }
-                else if (playerOne[i] > playerTwo[i])
-                {
-                    playerOne.Add(playerOne[i]);
-                    playerOne.Add(playerTwo[i]);
-                    playerOne.RemoveAt(i);
-                    playerTwo.RemoveAt(i);
-                }
-                else if (playerOne[i] < playerTwo[i])
-                {
-                    playerTwo.Add(playerTwo[i]);
-                    playerTwo.Add(playerOne[i]);
-                    playerOne.RemoveAt(i);
-                    playerTwo.RemoveAt(i);
-                }
-            }
-
-            if(playerOne.Count > 0)
-            {
-                Console.WriteLine($"First player wins!Sum: {playerOne.Sum()}");
-            }
-            else
-            {
-                Console.WriteLine($"Second player wins!Sum: {playerTwo.Sum()}");
             }
         }
     }

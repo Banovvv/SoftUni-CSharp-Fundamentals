@@ -17,7 +17,7 @@ namespace _05.BombNumbers
             int bombPosition = -1;
 
             while (numbers.Contains(bomb))
-            {
+            {                
                 for (int i = 0; i < numbers.Count; i++)
                 {
                     if (numbers[i] == bomb)
@@ -26,8 +26,11 @@ namespace _05.BombNumbers
                     }
                 }
 
+                // Setting start index to bombPosition - power if bombPosition - power > 0 else set it to 0
                 int startIndex = bombPosition - power < 0 ? 0 : bombPosition - power;
+                // Setting end index to bombPosition + power if bombPosition + power > numbers.Count - 1 else set it to numbers.Count - 1
                 int endIndex = bombPosition + power > numbers.Count - 1 ? numbers.Count - 1 : bombPosition + power;
+                // Getting the number of elements to remove and removing them with RemoveRange
                 int elementsToRemove = Math.Abs(endIndex - startIndex);
                 numbers.RemoveRange(startIndex, elementsToRemove + 1);
             }
